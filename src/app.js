@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const getGeoCode = require("./utils/geocode");
 const getWeatherForeCast = require("./utils/forecast");
+const port = process.env.PORT || 300;
 
 const app = express();
 const hbs = require("hbs");
@@ -78,6 +79,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3200, () => {
-  console.log("running");
+app.listen(port, () => {
+  console.log("running on port" + port);
 });
