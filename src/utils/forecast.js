@@ -15,10 +15,10 @@ const getWeatherForeCast = (latitutde, longitute, callback) => {
     } else {
       callback(
         undefined,
-        "weather is " +
+        "Weather is " +
           body.current.weather_descriptions[0] +
           " and Temperature is " +
-          body.current.temperature
+          body.current.temperature + " ."
       );
     }
   });
